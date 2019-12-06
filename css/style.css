@@ -1,49 +1,9 @@
-/******************************************************************
-	Theme Name: 
-	Description: 
-	Author: 
-	Author URI: 
-	Version: 1.0
-	Created: 
-******************************************************************/
-
-/*------------------------------------------------------------------
-	[Table of contents]
-
-	1. Template default CSS
-		- font-face
-	2.  Helper Css
-	3.  Header Section
-	4.  Hero Section
-	5.  About Search
-	6.  Banner Section
-	7.  Footer Property
-	8. Other Pages
-		- Home page 2
-		- Portfilio page
-		- Portfolio single page
-		- Blog Page
-		- Contact Page
-	9. Responsive
--------------------------------------------------------------------*/
-
-
-
-/*----------------------------------------*/
-/* Template default CSS
-/*----------------------------------------*/
-
-@font-face {
-	font-family: "BickhamScriptPro-Regular";
-	src: url("../fonts/BickhamScriptPro-Regular.woff") format("woff"), url("../fonts/BickhamScriptPro-Regular.woff2") format("woff2");
-	font-weight: normal;
-	font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css?family=Rochester|Solway&display=swap');
 
 html,
 body {
 	height: 100%;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Solway', serif;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
@@ -113,7 +73,7 @@ ol {
 }
 
 /*---------------------
-	2. Helper CSS
+	Helper CSS
 -----------------------*/
 
 .section-title {
@@ -257,7 +217,7 @@ ol {
 	top: 0;
 	left: 0;
 	z-index: 999999;
-	background: #000;
+	background: #ffffff;
 }
 
 .loader {
@@ -277,19 +237,19 @@ ol {
 	0% {
 		-webkit-transform: rotate(0deg);
 		transform: rotate(0deg);
-		border: 4px solid #f44336;
+		border: 4px solid #000000;
 		border-left-color: transparent;
 	}
 	50% {
 		-webkit-transform: rotate(180deg);
 		transform: rotate(180deg);
-		border: 4px solid #673ab7;
+		border: 4px solid #a4a4a4;
 		border-left-color: transparent;
 	}
 	100% {
 		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
-		border: 4px solid #f44336;
+		border: 4px solid #000000;
 		border-left-color: transparent;
 	}
 }
@@ -297,17 +257,17 @@ ol {
 @-webkit-keyframes loader {
 	0% {
 		-webkit-transform: rotate(0deg);
-		border: 4px solid #f44336;
+		border: 4px solid #000000;
 		border-left-color: transparent;
 	}
 	50% {
 		-webkit-transform: rotate(180deg);
-		border: 4px solid #673ab7;
+		border: 4px solid #a4a4a4;
 		border-left-color: transparent;
 	}
 	100% {
 		-webkit-transform: rotate(360deg);
-		border: 4px solid #f44336;
+		border: 4px solid #000000;
 		border-left-color: transparent;
 	}
 }
@@ -369,8 +329,21 @@ ol {
 }
 
 /*------------------
-  3. Header section
+  Header section
 ---------------------*/
+
+.grids {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+	z-index: -1;
+}
+	
+.grids div {
+	width: 1px;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.05);
+}
 
 .header-section {
 	position: absolute;
@@ -436,7 +409,7 @@ ol {
 }
 
 /* ----------------
-  4. Hero section
+  Hero section
 ---------------------*/
 
 .hs-item {
@@ -455,7 +428,7 @@ ol {
 
 .hs-item h1 {
 	font-size: 36px;
-	font-family: "BickhamScriptPro-Regular";
+	font-family: 'Rochester', cursive;
 	font-weight: 400;
 	line-height: 0.1;
 }
@@ -533,8 +506,44 @@ ol {
 	border-radius: 50%;
 }
 
+/* Patterns */
+.pattern {
+	position: absolute;
+}
+
+.about-pattern {
+	margin-top: 20vh;
+	margin-left: 50%;
+	opacity: 0.1;
+}
+
+.about-pattern-2 {
+	margin-top: 50vh;
+	margin-left: 10%;
+	opacity: 0.05;
+}
+
+.about-pattern-3 {
+	margin-top: 20vh;
+	margin-left: 25%;
+	opacity: 0.07;
+}
+
+.about-pattern-4 {
+	margin-top: -0vh;
+	margin-left: 45%;
+	opacity: 0.05;
+}
+
+.about-pattern-5 {
+	width: 400px;
+	margin-top: 20vh;
+	margin-left: 15%;
+	opacity: 0.1;
+}
+
 /* ----------------
-  5. About section
+  About section
 ---------------------*/
 
 .about-section {
@@ -549,10 +558,12 @@ ol {
 	font-size: 48px;
 	font-weight: 500;
 	margin-bottom: 20px;
+	color: black;
 }
 
 .about-content-warp p {
 	margin-bottom: 40px;
+	color: black;
 }
 
 .about-content-warp.text-white p {
@@ -560,7 +571,7 @@ ol {
 }
 
 /* ----------------
-  6. Banner section
+  Banner section
 ---------------------*/
 
 .banner-section {
@@ -592,12 +603,12 @@ ol {
 }
 
 .footer-about p {
-	color: #fff;
+	color: black;
 	opacity: 1;
 }
 
 /* ----------------
-  7. Footer section
+  Footer section
 ---------------------*/
 
 .footer-info {
@@ -605,7 +616,7 @@ ol {
 }
 
 .footer-info h6 {
-	color: #fff;
+	color: black;
 	text-transform: uppercase;
 	margin-bottom: 27px;
 	font-weight: 500;
@@ -617,7 +628,7 @@ ol {
 }
 
 .footer-info ul li {
-	color: #fff;
+	color: black;
 	opacity: 1;
 	font-size: 14px;
 	text-transform: uppercase;
@@ -704,10 +715,11 @@ ol {
 	font-size: 48px;
 	padding-top: 5px;
 	margin-bottom: 40px;
+	color: black;
 }
 
 .sp-about-section .sp-about-content p {
-	color: #fff;
+	color: black;
 	opacity: 0.5;
 }
 
@@ -720,22 +732,21 @@ ol {
 .fact-item h2 {
 	font-size: 72px;
 	font-weight: 500;
-	color: #fff;
+	color: black;
 }
 
 .fact-item p {
 	font-size: 24px;
-	color: #fff;
+	color: black;
 	line-height: normal;
 }
 
 
 /* ----------------
-  Portfilio page
+  Portfilio Page
  ---------------------*/
 .portfilio-page {
 	padding-top: 278px;
-	background: #05020d;
 	z-index: 1;
 	position: relative;
 }
@@ -782,7 +793,7 @@ ol {
 }
 
 .portfolio-intro .portfolio-filter li.mixitup-control-active {
-	border-bottom: 3px solid #fff;
+	border-bottom: 3px solid black;
 }
 
 .portfolio-next-btn {
@@ -799,248 +810,7 @@ ol {
 
 .portfolio-next-btn h3 {
 	font-weight: 500;
-	color: #fff;
-}
-
-/* ---------------------
- Portfolio single page
-------------------------*/
-
-.portfilio-single {
-	height: 918px;
-	padding: 270px 30px 0;
-}
-
-.portfolio-single-content {
-	max-width: 590px;
-}
-
-.portfolio-single-content span {
-	font-size: 14px;
-	font-weight: 500;
-}
-
-.portfolio-single-content h2 {
-	font-size: 72px;
-	font-weight: 600;
-	margin-bottom: 30px;
-}
-
-.portfolio-single-content p {
-	opacity: 0.5;
-	margin-bottom: 30px;
-}
-
-.portfolio-single-content ul {
-	list-style: none;
-	padding-top: 20px;
-}
-
-.portfolio-single-content ul li {
-	color: #000;
-	font-size: 14px;
-	color: #fff;
-	margin-bottom: 15px;
-}
-
-.portfolio-single-content ul li h6 {
-	font-size: 14px;
-	width: 63px;
-	display: inline-block;
-}
-
-.portfolio-single-content ul li span {
-	opacity: 0.5;
-}
-
-.portfolio-slider-warp {
-	position: relative;
-}
-
-.portfolio-slider-warp .owl-carousel .owl-nav {
-	position: absolute;
-	top: 50%;
-	margin-top: -12px;
-	right: 52px;
-}
-
-.portfolio-slider-warp .slide-num-holder {
-	position: absolute;
-	top: 50%;
-	right: 101px;
-	z-index: 99;
-	color: #fff;
-	font-weight: 500;
-	margin-top: -10px;
-	font-size: 16px;
-}
-
-.portfolio-slider-warp .center img {
-	border: 2px solid #fff;
-}
-
-/* ----------------
-  Blog Page
----------------------*/
-
-.blog-page {
-	padding-top: 120px;
-	padding-bottom: 107px;
-}
-
-.blog-item {
-	margin-bottom: 58px;
-}
-
-.blog-thumb {
-	position: relative;
-	margin-bottom: 35px;
-}
-
-.blog-date {
-	position: absolute;
-	width: 163px;
-	height: 47px;
-	top: 36px;
-	left: -65px;
-	text-align: center;
-	padding-top: 12px;
-	font-size: 12px;
-	color: #fff;
-	font-weight: 500;
-	background: #1a1420;
-	border: 2px solid #fff;
-}
-
-.blog-content h3 {
-	margin-bottom: 15px;
-}
-
-.blog-content p {
-	color: #000;
-	opacity: 0.5;
-	font-weight: 500;
-	margin-bottom: 25px;
-}
-
-.blog-metas {
-	margin-bottom: 30px;
-}
-
-.blog-metas .blog-meta {
-	display: inline-block;
-	margin-right: 13px;
-	padding-right: 13px;
-	font-size: 12px;
-	color: #565656;
-	font-weight: 50;
-	position: relative;
-}
-
-.blog-metas .blog-meta:after {
-	position: absolute;
-	content: "|";
-	right: -1px;
-	top: 0;
-	font-size: 12px;
-}
-
-.blog-metas .blog-meta:last-child {
-	margin-right: 0;
-	padding-right: 0;
-}
-
-.blog-metas .blog-meta:last-child:after {
-	display: none;
-}
-
-.sb-widget {
-	margin-bottom: 55px;
-}
-
-.sb-widget .sb-title {
-	font-weight: 600;
-	font-size: 18px;
-	margin-bottom: 30px;
-}
-
-.sb-widget .sb-search input {
-	width: 100%;
-	height: 34px;
-	border: none;
-	font-size: 12px;
-	padding: 10px 22px;
-	border-bottom: 2px solid #1a1624;
-	background: #f7f6fa;
-}
-
-.sb-widget ul {
-	list-style: none;
-}
-
-.sb-widget ul li {
-	margin-bottom: 10px;
-}
-
-.sb-widget ul li a {
-	font-size: 14px;
-	color: #000;
-	opacity: 0.5;
-	font-weight: 500;
-}
-
-.sb-latest-post {
-	padding-top: 15px;
-}
-
-.sb-latest-post .sbl-item {
-	margin-top: 25px;
-}
-
-.sb-latest-post img {
-	margin-bottom: 20px;
-}
-
-.sb-latest-post span {
-	font-size: 12px;
-	font-weight: 600;
-}
-
-.sb-latest-post h4 {
-	font-size: 18px;
-	padding-top: 2px;
-	padding-bottom: 3px;
-}
-
-.sb-latest-post p {
-	font-size: 14px;
-	color: #000;
-	opacity: 0.5;
-}
-
-.site-pagination {
-	padding-top: 50px;
-}
-
-.site-pagination a {
-	display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	height: 37px;
-	min-width: 37px;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	color: #b7b7b7;
-	font-size: 14px;
-}
-
-.site-pagination .active {
-	color: #020202;
-	border: 2px solid #1b1c2e;
+	color: black;
 }
 
 /* ----------------
@@ -1087,11 +857,11 @@ ol {
 	width: 100%;
 	border: none;
 	font-size: 12px;
-	color: #fff;
+	color: #000000;
 	padding-bottom: 22px;
 	margin-bottom: 25px;
 	font-weight: 500;
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid black;
 	background: transparent;
 }
 
@@ -1100,33 +870,8 @@ ol {
 	margin-bottom: 50px;
 }
 
-.newsletter-section {
-	padding-top: 105px;
-	padding-bottom: 95px;
-}
-
-.newsletter-section h3 {
-	color: #FFF;
-	font-weight: 500;
-	text-transform: uppercase;
-	padding: 30px 0;
-}
-
-.newsletter-form input {
-	width: calc(100% - 240px);
-	border: none;
-	font-size: 14px;
-	color: #fff;
-	padding-bottom: 22px;
-	margin-bottom: 25px;
-	font-weight: 500;
-	border-bottom: 2px solid #fff;
-	background: transparent;
-	margin-right: 45px;
-}
-
 /* ----------------
-  9. Responsive
+  Responsive
 ---------------------*/
 
 @media (min-width: 1200px) {
@@ -1148,9 +893,6 @@ ol {
 	}
 	.portfolio-intro .portfolio-filter li {
 		margin-right: 30px;
-	}
-	.blog-date {
-		left: -15px;
 	}
 }
 
@@ -1260,7 +1002,7 @@ ol {
 		width: 40px;
 		height: 40px;
 		font-size: 22px;
-		border: 1px solid #8c8c8c;
+		border: 1px solid #ffffff;
 		border-radius: 50%;
 		padding-top: 3px;
 		cursor: pointer;
@@ -1374,11 +1116,6 @@ ol {
 	}
 	.portfolio-item {
 		width: 100%;
-	}
-	.newsletter-form input {
-		width: 100%;
-		margin-bottom: 30px;
-		margin-right: 0;
 	}
 	.portfolio-slider-warp .center img {
 		border: none;
