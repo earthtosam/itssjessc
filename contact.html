@@ -43,7 +43,7 @@
 	<header class="header-section">
 		<div class="header-warp">
 			<!-- Logo -->
-			<a href="index.html" class="site-logo">
+			<a href="index" class="site-logo">
 				<img src="img/logo-dark.png" alt="">
 			</a>
 			<div class="header-social">
@@ -57,10 +57,10 @@
 			</div>
 			<!-- Menu -->
 			<ul class="main-menu">
-				<li><a href="index.html" class="text-dark">Home</a></li>
-				<li><a href="home-2.html" class="text-dark">About the Artist</a></li>
-				<li><a href="portfolio.html" class="text-dark">Portfolio</a></li>
-				<li><a href="contact.html" class="text-dark">Contact</a></li>
+				<li><a href="index">Home</a></li>
+				<li><a href="about">About the Artist</a></li>
+				<li><a href="portfolio">Portfolio</a></li>
+				<li><a href="contact">Contact</a></li>
 			</ul>
 		</div>
 	</header>
@@ -76,18 +76,22 @@
 					</div>
 				</div>
 				<div class="col-lg-7 offset-lg-1">
-					<form class="contact-form">
+					<form action="emailForm.php" method="post" name="form" class="contact-form">
 						<div class="row">
 							<div class="col-md-6">
-								<input type="text" placeholder="Your Name">
+								<input type="text" name="name" placeholder="Your Name" required>
 							</div>
 							<div class="col-md-6">
-								<input type="text" placeholder="Your E-mail">
+								<input type="email" name="email" placeholder="Your E-mail" required>
+							</div>
+							<div class="col-md-12">
+								<input type="tel" name="phone" placeholder="Your Phone Number" required>
 							</div>
 							<div class="col-md-12">
 								<input type="text" placeholder="Subject">
-								<textarea placeholder="Message"></textarea>
-								<button class="site-btn sb-dark"><span>send</span></button>
+								<textarea name="msg" placeholder="Message"></textarea>
+								<button type="submit" name="submit" class="site-btn sb-dark"
+									id="submit-btn"><span>send</span></button>
 							</div>
 						</div>
 					</form>
@@ -95,6 +99,11 @@
 			</div>
 		</div>
 	</section>
+
+	<div id="msg">
+		<div class="alert alert-success" style="display:none">Message successfuly Sent.</div>
+		<div class="alert alert-danger" style="display:none">Please Fillup Properly, and Try Again.</div>
+	</div>
 
 	<!-- Banner Section -->
 	<section class="banner-section set-bg" data-setbg="./img/footer-bg-purple.jpg">
@@ -125,7 +134,7 @@
 					<div class="footer-info">
 						<h6>Get in touch</h6>
 						<ul>
-							<li><a href="contact.html">Ask</li></a>
+							<li><a href="contact">Ask</li></a>
 							<li><a href="https://www.instagram.com/itssjessc/" target="_blank">Instagram</a></li>
 							<li><a href="https://twitter.com/Jessicamatiass_" target="_blank">Twitter</a></li>
 							<li><a href="https://kdon.iheart.com/featured/jess-c/" target="_blank">KDON.com</a></li>
@@ -155,6 +164,7 @@
 	<script src="js/masonry.pkgd.min.js"></script>
 	<script src="js/fullpage.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/emailVerification.js"></script>
 
 </body>
 
